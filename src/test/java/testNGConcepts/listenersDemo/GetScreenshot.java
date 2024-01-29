@@ -18,7 +18,7 @@ public class GetScreenshot {
 
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         String destFilePath = System.getProperty("user.dir")+"\\Screenshots"+testName;
-
+        System.out.println("new changes by user 1");
         FileUtils.copyFile(srcFile,new File(destFilePath));
 
     }
