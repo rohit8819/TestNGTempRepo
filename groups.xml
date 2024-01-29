@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+<!--    <groups>-->
+<!--        <run>-->
+<!--            <include name="smoke"/>-->
+<!--        </run>-->
+<!--    </groups>-->
+
+    <test verbose="2" preserve-order="true" name="Test1">
+        <groups>
+            <define name="smokeandlogin">
+                <include name="smoke"/>
+                <include name="login"/>
+            </define>
+            <run>
+                <include name="smokeandlogin"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testNGConcepts.groupsDemo.Login">
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="2" preserve-order="true" name="Test2">
+        <classes>
+            <class name="testNGConcepts.groupsDemo.Register">
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="2" preserve-order="true" name="Test3">
+        <classes>
+            <class name="testNGConcepts.groupsDemo.Search">
+            </class>
+        </classes>
+    </test>
+
+<!--    Groups depends on Groups using dependencies tag and depends-on attribute-->
+<!--    <test verbose="2" preserve-order="true" name="Test3">-->
+<!--        <groups>-->
+<!--            <dependencies>-->
+<!--                <group name="sanity" depends-on="smoke"/>-->
+<!--                <group name="regression" depends-on="sanity"/>-->
+<!--            </dependencies>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="testNGConcepts.groupsDemo.Search">-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>

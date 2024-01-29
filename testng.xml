@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/91832/test/TestNGProject">
+        <classes>
+        <class name="testNGConcepts.testngXMLfile.ClassA">
+            <methods><include name="methodAOne"/>
+                <include name="methodATwo"/>
+                <include name="methodAThree"/>
+            </methods>
+        </class><class name="testNGConcepts.testngXMLfile.ClassB">
+            <methods>
+                <include name="methodBOne"/>
+                <include name="methodBTwo"/>
+                <include name="methodBThree"/>
+                <include name="methodBFour"/></methods>
+        </class><class name="testNGConcepts.testngXMLfile.ClassC">
+            <methods><include name="methodCOne"/>
+                <include name="methodCTwo"/>
+            </methods>
+        </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="url" value="https://tutorialsninja.com/demo/"/>
+    <parameter name="email" value="rohit37@gmail.com"/>
+    <parameter name="password" value="1234"/>
+
+    <test verbose="2" preserve-order="true" name="Test1" enabled="false">
+        <classes>
+            <class name="testNGConcepts.Annotations.Login">
+                <methods>
+                    <include name="verifyUserLoginWithValidCredentials"/>
+                    <exclude name="verifyUserLoginWithValidEmailInvalidPassword"/>
+                </methods>
+            </class>
+            <class name="testNGConcepts.Annotations.Login">
+                <methods>
+                    <exclude name="verifyUserLoginWithInvalidValidEmailValidPassword"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Test2" enabled="true">
+        <classes>
+            <class name="testNGConcepts.Annotations.Login">
+                <methods>
+                    <include name="verifyUserLoginWithInvalidValidEmailValidPassword"/>
+                    <include name="verifyUserLoginWithInvalidValidEmailInValidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
