@@ -20,6 +20,7 @@ public class GetScreenshot {
         String destFilePath = System.getProperty("user.dir")+"\\Screenshots"+testName;
         System.out.println("new changes by user 1");
         System.out.println("new changes 2 by user 1");
+        System.out.println(("changes by user 2"));
         FileUtils.copyFile(srcFile,new File(destFilePath));
 
     }
